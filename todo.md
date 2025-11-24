@@ -1,0 +1,4 @@
+- [x] Remove login screen from index.html and show main container directly
+- [x] Remove /api/register and /api/login endpoints from server.js
+- [x] Make user_id optional in /api/highscores POST
+- [x] Remove login-related JavaScript from script.js

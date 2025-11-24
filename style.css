@@ -1,0 +1,1878 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow Condensed", sans-serif;
+  background: linear-gradient(180deg, #0a0f1b 0%, #10182b 100%);
+  color: #cfd3da;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Login Screen Styles */
+.login-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #0a0f1b 0%, #10182b 100%);
+}
+
+.login-container {
+  background: rgba(16, 24, 43, 0.9);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 300px;
+}
+
+.login-container h1 {
+  font-size: 40px;
+  color: #f1d65b;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.login-container h2 {
+  font-size: 18px;
+  color: #74819d;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-container input {
+  padding: 12px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  background: rgba(31, 41, 64, 0.6);
+  color: #cfd3da;
+  font-size: 16px;
+  transition: all 0.25s ease;
+}
+
+.login-container input:focus {
+  outline: none;
+  border-color: #f1d65b;
+  box-shadow: 0 0 10px rgba(241, 214, 91, 0.5);
+}
+
+.login-container button {
+  padding: 12px;
+  border: 2px solid #1f2940;
+  border-radius: 6px;
+  background: #1f2940;
+  color: #cfd3da;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.login-container button:hover {
+  border-color: #f1d65b;
+  color: #f1d65b;
+  background: rgba(241, 214, 91, 0.1);
+  box-shadow: 0 0 15px rgba(241, 214, 91, 0.6);
+}
+
+#loginMessage {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #ff6b6b;
+}
+
+body.light-theme {
+  background: linear-gradient(180deg, #f0f4f8 0%, #e1e8ed 100%);
+  color: #2c3e50;
+}
+
+body.light-theme .sidebar {
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .menu-item {
+  color: #2c3e50;
+}
+
+body.light-theme .menu-item.active {
+  outline: 3px solid #3498db;
+  background-color: rgba(52, 152, 219, 0.1);
+  color: #3498db;
+  box-shadow: 0 0 20px rgba(52, 152, 219, 0.6);
+}
+
+body.light-theme .menu-item:hover {
+  background-color: rgba(52, 152, 219, 0.15);
+  color: #3498db;
+}
+
+body.light-theme .social-btn {
+  background-color: #ecf0f1;
+  border: 2px solid #ecf0f1;
+  color: #2c3e50;
+}
+
+body.light-theme .social-btn:hover {
+  background-color: #bdc3c7;
+  color: #3498db;
+  border-color: #3498db;
+  box-shadow: 0 0 15px rgba(52, 152, 219, 0.6);
+}
+
+body.light-theme .social-btn img {
+  filter: invert(0);
+}
+
+body.light-theme .game-title {
+  color: #2c3e50;
+}
+
+body.light-theme .subtitle {
+  color: #7f8c8d;
+}
+
+body.light-theme .footer {
+  color: #95a5a6;
+}
+
+body.light-theme .weapon-list,
+body.light-theme .weapon-info {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .weapon-list h2 {
+  color: #3498db;
+}
+
+body.light-theme .weapon-btn {
+  background: rgba(236, 240, 241, 0.8);
+  color: #2c3e50;
+}
+
+body.light-theme .weapon-btn:hover {
+  border-color: #3498db;
+  color: #3498db;
+}
+
+body.light-theme .weapon-btn.active {
+  border-color: #3498db;
+  background: rgba(52, 152, 219, 0.1);
+  color: #3498db;
+  box-shadow: 0 0 15px rgba(52, 152, 219, 0.6);
+}
+
+body.light-theme .weapon-btn img {
+  filter: invert(0);
+}
+
+body.light-theme .weapon-info h2 {
+  color: #3498db;
+}
+
+body.light-theme .weapon-image {
+  filter: invert(0);
+}
+
+body.light-theme .weapon-info p {
+  color: #34495e;
+}
+
+body.light-theme .info-buttons button {
+  background: #ecf0f1;
+  border: 2px solid #ecf0f1;
+  color: #2c3e50;
+}
+
+body.light-theme .info-buttons button:hover {
+  border-color: #3498db;
+  color: #3498db;
+  background: rgba(52, 152, 219, 0.1);
+  box-shadow: 0 0 15px rgba(52, 152, 219, 0.6);
+}
+
+body.light-theme .game-overlay {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+body.light-theme .mode-text {
+  color: #3498db;
+}
+
+body.light-theme .typing-animation {
+  color: #2c3e50;
+}
+
+body.light-theme .game-screen {
+  background: radial-gradient(circle at center, #f8f9fa 0%, #ecf0f1 100%);
+}
+
+body.light-theme .player-circle {
+  border: 3px solid rgba(52, 152, 219, 0.85);
+  box-shadow: 0 0 30px rgba(52, 152, 219, 0.18),
+    0 0 8px rgba(52, 152, 219, 0.05) inset;
+  background: rgba(52, 152, 219, 0.03);
+}
+
+body.light-theme .player-circle.flash {
+  box-shadow: 0 0 40px 10px rgba(52, 152, 219, 0.95),
+    0 0 80px 26px rgba(52, 152, 219, 0.55);
+}
+
+body.light-theme .enemy {
+  background: #3498db;
+  box-shadow: 0 0 18px rgba(52, 152, 219, 0.6);
+}
+
+body.light-theme .enemy .word {
+  color: #2c3e50;
+}
+
+body.light-theme .enemy .word span.done {
+  color: #3498db;
+  text-shadow: 0 0 8px rgba(52, 152, 219, 0.9);
+}
+
+body.light-theme .enemy.selected {
+  box-shadow: 0 0 28px rgba(255, 255, 255, 0.25),
+    0 0 24px rgba(52, 152, 219, 0.9);
+}
+
+body.light-theme .laser {
+  background: #3498db;
+  box-shadow: 0 0 5px #3498db, 0 0 10px #3498db, 0 0 15px #3498db;
+}
+
+body.light-theme .particle {
+  background: rgba(52, 152, 219, 1);
+  box-shadow: 0 0 18px rgba(52, 152, 219, 0.9), 0 0 6px rgba(52, 152, 219, 0.6);
+}
+
+body.light-theme .shoot-flash {
+  background: radial-gradient(
+    circle at center,
+    rgba(52, 152, 219, 0.06) 0%,
+    rgba(52, 152, 219, 0.36) 12%,
+    rgba(52, 152, 219, 0.7) 18%,
+    rgba(52, 152, 219, 0.18) 36%,
+    rgba(52, 152, 219, 0) 60%
+  );
+}
+
+body.light-theme .shoot-flash.big {
+  background: radial-gradient(
+    circle at center,
+    rgba(52, 152, 219, 0.03) 0%,
+    rgba(52, 152, 219, 0.48) 10%,
+    rgba(52, 152, 219, 0.9) 24%,
+    rgba(52, 152, 219, 0.28) 46%,
+    rgba(52, 152, 219, 0) 72%
+  );
+}
+
+body.light-theme .word-wrong-shake .word-letter,
+body.light-theme .word-wrong-shake span {
+  color: #e74c3c !important;
+  text-shadow: 0 0 8px rgba(231, 76, 60, 0.9);
+}
+
+body.light-theme #scoreDisplay {
+  color: #2c3e50;
+}
+
+body.light-theme #highscoreDisplay {
+  color: #3498db;
+}
+
+body.light-theme .highscore-label {
+  color: #3498db;
+}
+
+body.light-theme #highscoreValue {
+  color: #3498db;
+}
+
+body.light-theme .enemy.ranged {
+  background: radial-gradient(circle at center, #9b59b6 0%, #8e44ad 100%);
+  box-shadow: 0 0 25px rgba(155, 89, 182, 0.8), 0 0 10px rgba(142, 68, 173, 0.5);
+}
+
+body.light-theme .ranged-laser {
+  background: linear-gradient(to right, #9b59b6 0%, #e74c3c 100%);
+  box-shadow: 0 0 12px rgba(142, 68, 173, 0.8), 0 0 25px rgba(155, 89, 182, 0.7);
+}
+
+body.light-theme .charge-indicator {
+  border: 3px solid rgba(155, 89, 182, 0.6);
+  box-shadow: 0 0 15px rgba(155, 89, 182, 0.8);
+}
+
+body.light-theme .health-indicator {
+  color: #27ae60;
+  text-shadow: 0 0 6px #27ae60, 0 0 12px #2ecc71,
+    0 0 20px rgba(39, 174, 96, 0.8);
+}
+
+body.light-theme .heal-popup {
+  background: linear-gradient(to bottom right, #27ae60, #2ecc71);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 8px rgba(39, 174, 96, 0.6);
+}
+
+body.light-theme .bomb-indicator {
+  color: #e74c3c;
+  text-shadow: 0 0 6px #e74c3c, 0 0 12px #c0392b,
+    0 0 20px rgba(231, 76, 60, 0.9);
+}
+
+body.light-theme .explosion-core {
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255, 235, 59, 0.95) 0%,
+    rgba(255, 193, 7, 0.95) 30%,
+    rgba(255, 87, 34, 0.95) 60%,
+    rgba(121, 85, 72, 0.9) 100%
+  );
+  box-shadow: 0 0 12px rgba(255, 193, 7, 0.9), 0 0 30px rgba(255, 87, 34, 0.85),
+    0 0 60px rgba(255, 87, 34, 0.6);
+}
+
+body.light-theme .explosion-shockwave {
+  border: 2px solid rgba(255, 193, 7, 0.25);
+  box-shadow: 0 0 30px rgba(255, 193, 7, 0.22),
+    inset 0 0 12px rgba(255, 235, 59, 0.06);
+}
+
+body.light-theme .explosion-flash {
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1),
+    rgba(255, 235, 59, 0.9)
+  );
+}
+
+body.light-theme .card-overlay {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+body.light-theme .upgrade-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #3498db;
+  color: #2c3e50;
+}
+
+body.light-theme .upgrade-card:hover {
+  box-shadow: 0 0 15px #3498db;
+}
+
+body.light-theme .upgrade-card h3 {
+  color: #3498db;
+}
+
+body.light-theme .options .opt-panel {
+  background: rgba(255, 255, 255, 0.9);
+  color: #2c3e50;
+}
+
+body.light-theme .options .opt-header {
+  color: #3498db;
+}
+
+body.light-theme .options .opt-arrow {
+  background: rgba(236, 240, 241, 0.8);
+  color: #2c3e50;
+}
+
+body.light-theme .options .opt-arrow:hover {
+  border-color: #3498db;
+  color: #3498db;
+}
+
+body.light-theme .options .opt-row input[type="range"] {
+  background: rgba(236, 240, 241, 0.8);
+}
+
+body.light-theme .options .opt-row input[type="range"]:hover {
+  border-color: #3498db;
+}
+
+body.light-theme .options .opt-row select {
+  background: rgba(236, 240, 241, 0.8);
+  color: #2c3e50;
+}
+
+body.light-theme .options .opt-row select:hover {
+  border-color: #3498db;
+  color: #3498db;
+}
+
+body.light-theme .options .opt-actions button {
+  background: #ecf0f1;
+  border: 2px solid #ecf0f1;
+  color: #2c3e50;
+}
+
+body.light-theme .options .opt-actions button:hover {
+  border-color: #3498db;
+  color: #3498db;
+  background: rgba(52, 152, 219, 0.1);
+  box-shadow: 0 0 15px rgba(52, 152, 219, 0.6);
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.sidebar {
+  width: 260px;
+  height: 100%;
+  background: linear-gradient(180deg, #1a2438 0%, #0f1727 100%);
+  position: absolute;
+  left: 8%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateX(0);
+  transition: transform 1.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.sidebar.slide-out-all {
+  transform: translateX(-150%);
+}
+
+.menu {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 100%;
+  align-items: center;
+}
+
+.menu-item {
+  font-size: 26px;
+  letter-spacing: 1px;
+  color: #cfd3da;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideIn 0.6s forwards;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 6px;
+}
+
+.menu-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.menu-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.menu-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.menu-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.menu-item:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.menu-item.active {
+  outline: 3px solid #f1d65b;
+  background-color: rgba(241, 214, 91, 0.1);
+  color: #f1d65b;
+  box-shadow: 0 0 20px rgba(241, 214, 91, 0.6);
+}
+
+.menu-item:hover {
+  background-color: rgba(241, 214, 91, 0.15);
+  color: #f1d65b;
+}
+
+.socials {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.social-btn {
+  background-color: #1f2940;
+  border: 2px solid #1f2940;
+  border-radius: 8px;
+  padding: 14px 20px;
+  color: #cfd3da;
+  font-size: 18px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+
+.social-btn img {
+  width: 24px;
+  height: 24px;
+  filter: invert(0.8);
+}
+
+.social-btn:hover {
+  background-color: #2b3754;
+  color: #f1d65b;
+  border-color: #f1d65b;
+  box-shadow: 0 0 15px rgba(241, 214, 91, 0.6);
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-left: 260px;
+  transition: all 0.3s ease;
+}
+
+.logo-img {
+  width: 240px;
+  margin-bottom: 30px;
+  filter: brightness(0) invert(1);
+}
+
+.game-title {
+  font-size: 70px;
+  letter-spacing: 26px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  padding-left: 26px;
+}
+
+.subtitle {
+  font-size: 20px;
+  letter-spacing: 18px;
+  color: #74819d;
+  text-transform: uppercase;
+  padding-left: 22px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 25px;
+  right: 40px;
+  font-size: 12px;
+  color: #4b5469;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.game-setup {
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  color: #cfd3da;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+.fade-out {
+  animation: fadeOut 0.5s forwards;
+}
+
+.weapon-list,
+.weapon-info {
+  background-color: rgba(16, 24, 43, 0.7);
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  width: 320px;
+  min-height: 420px;
+}
+
+.weapon-list h2 {
+  color: #f1d65b;
+  font-size: 28px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.weapon-btn {
+  width: 100%;
+  text-align: left;
+  padding: 14px 16px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  background: rgba(31, 41, 64, 0.6);
+  color: #cfd3da;
+  font-size: 20px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.weapon-btn img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 2px;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+}
+
+.weapon-btn:hover {
+  border-color: #f1d65b;
+  color: #f1d65b;
+}
+
+.weapon-btn.active {
+  border-color: #f1d65b;
+  background: rgba(241, 214, 91, 0.1);
+  color: #f1d65b;
+  box-shadow: 0 0 15px rgba(241, 214, 91, 0.6);
+}
+
+.weapon-info h2 {
+  font-size: 32px;
+  color: #f1d65b;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.weapon-image {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 20px auto;
+  filter: brightness(0) invert(1);
+}
+
+.weapon-info p {
+  color: #aeb6c5;
+  line-height: 1.5;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.info-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.info-buttons button {
+  background: #1f2940;
+  border: 2px solid #1f2940;
+  border-radius: 6px;
+  color: #cfd3da;
+  font-size: 18px;
+  padding: 12px 30px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.info-buttons button:hover {
+  border-color: #f1d65b;
+  color: #f1d65b;
+  background: rgba(241, 214, 91, 0.1);
+  box-shadow: 0 0 15px rgba(241, 214, 91, 0.6);
+}
+
+.placeholder {
+  display: none;
+  font-size: 24px;
+  color: #74819d;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+/* === GAME SCREEN & PLAYER CIRCLE === */
+
+:root {
+  --unit: 30px;
+}
+
+/* Dalam tag <style> */
+
+/* === OVERLAY PERSIAPAN (Baru Ditambahkan) === */
+.game-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Layer abu-abu transparan */
+  background: rgba(16, 24, 43, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 100; /* Pastikan di atas semua elemen game */
+  opacity: 1;
+  transition: opacity 1s ease-out; /* Transisi untuk fade out */
+}
+
+.game-overlay.fade-out {
+  opacity: 0;
+  pointer-events: none; /* Nonaktifkan klik setelah fade out */
+}
+
+.mode-text {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 30px;
+  letter-spacing: 15px;
+  color: #f1d65b; /* Warna kuning dari UI Anda */
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  opacity: 0; /* Mulai tersembunyi */
+  animation: fadeInMode 0.5s ease 0.5s forwards;
+}
+
+.typing-animation {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 60px;
+  letter-spacing: 5px;
+  color: #ffffff;
+  text-transform: uppercase;
+  overflow: hidden; /* Sembunyikan kelebihan teks */
+  white-space: nowrap; /* Jaga teks tetap dalam satu baris */
+  width: 0;
+  margin-top: 10px;
+  opacity: 0;
+  animation: fadeInTyping 0.1s ease 1s forwards,
+    /* Teks mulai terlihat setelah mode text */ typing 2s steps(10, end) 1.1s
+      forwards,
+    /* Animasi ketik 10 karakter dalam 2 detik */ blink-caret 0.75s step-end
+      infinite 3.1s; /* Kursor berkedip setelah animasi selesai */
+}
+
+/* Teks yang akan diketik adalah "GET READY" (10 karakter: 8 huruf + 1 spasi) */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 450px;
+  } /* Sesuaikan lebar ini jika font Anda berbeda */
+}
+
+/* Kursor berkedip */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+/* Animasi untuk memunculkan teks */
+@keyframes fadeInMode {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeInTyping {
+  to {
+    opacity: 1;
+  }
+}
+
+/* === STOPWATCH TIMER === */
+#stopwatch {
+  position: absolute;
+  /* 1. MOVE OFF-SCREEN: Change initial 'top' to be slightly above the screen (e.g., -50px) */
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%); /* stay horizontally centered */
+  width: 110px;
+  text-align: center;
+  padding: 6px 14px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  opacity: 0;
+  /* 2. ADD 'top' to transition: Now both opacity and position will animate */
+  transition: opacity 0.8s ease, top 0.8s ease;
+}
+
+#stopwatch.show {
+  /* 3. DEFINE TARGET POSITION: Set the final, visible position */
+  opacity: 1;
+  top: 20px; /* Slide to the target position */
+}
+#streakDisplay {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%) scale(1);
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  opacity: 0;
+  transition: transform 0.15s ease, opacity 0.3s ease;
+  pointer-events: none;
+}
+
+#streakDisplay.show {
+  opacity: 1;
+}
+
+#streakDisplay.pop {
+  transform: translateY(-50%) scale(1.3);
+}
+
+.game-screen {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, #0d1322 0%, #080c15 100%);
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.player-circle {
+  width: calc(var(--unit) * 2);
+  height: calc(var(--unit) * 2);
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.85);
+  /* Pertahankan box-shadow & background */
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.18),
+    0 0 8px rgba(241, 214, 91, 0.05) inset;
+  background: rgba(255, 255, 255, 0.03);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: none;
+}
+
+/* PLAYER FLASH (added)
+         A short, crisp flash + slight scale for tactile shooting feedback.
+      */
+.player-circle.flash {
+  box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.95),
+    0 0 80px 26px rgba(241, 214, 91, 0.55);
+  transform: translate(-50%, -50%) scale(1.08);
+  transition: box-shadow 120ms ease, transform 120ms ease;
+}
+
+.player-health-bar {
+  position: absolute;
+  bottom: calc(50% + var(--unit) + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 8px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.6) inset;
+  overflow: hidden;
+  display: none;
+}
+
+.player-health-inner {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #fff, #f1d65b);
+  transition: width 0.2s linear, background 0.2s linear;
+}
+
+.enemy.stunned {
+  filter: grayscale(1) brightness(1.3);
+  animation: stunBlink 0.1s infinite alternate;
+}
+
+@keyframes stunBlink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+
+.enemy {
+  position: absolute;
+  width: var(--unit);
+  height: var(--unit);
+  border-radius: 50%;
+  background: #ffd700;
+  box-shadow: 0 0 18px rgba(241, 214, 91, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+}
+
+.enemy .word {
+  position: absolute;
+  top: -26px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: transparent;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: white;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.enemy .word span {
+  padding: 0 1px;
+  transition: color 0.05s linear, text-shadow 0.05s linear;
+  color: #fff;
+}
+
+.enemy .word span.done {
+  color: #f1d65b;
+  text-shadow: 0 0 8px rgba(241, 214, 91, 0.9);
+}
+
+.enemy.selected {
+  box-shadow: 0 0 28px rgba(255, 255, 255, 0.25),
+    0 0 24px rgba(241, 214, 91, 0.9);
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+/* === GAMBAR LASER YANG DIMODIFIKASI === */
+.laser {
+  position: absolute;
+  height: 4px; /* Tebal laser */
+
+  /* ✅ PERBAIKAN 1 & 2: Full Putih dan Hapus Gradien */
+  background: #ffffff;
+
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff;
+
+  transform-origin: left center;
+  pointer-events: none;
+
+  border-radius: 1px;
+  width: 0;
+  /* Transisi awal untuk travel. Opacity dan height akan di-override */
+  transition: width 60ms linear, opacity 100ms linear;
+}
+
+.particle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 18px rgba(241, 214, 91, 0.9), 0 0 6px rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+  opacity: 1;
+  animation: particle-fade 600ms ease-out forwards;
+}
+
+@keyframes particle-fade {
+  to {
+    transform: translateY(-16px) scale(0.3);
+    opacity: 0;
+  }
+}
+
+.overlay-debug {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  color: #9aa7c7;
+  font-size: 12px;
+  pointer-events: none;
+}
+
+/* SCREEN FLASH (added)
+         A very short full-screen radial flash to emphasize shooting.
+      */
+.shoot-flash {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 150;
+  mix-blend-mode: screen;
+  /* ring: center is more transparent, bright ring around center, then fade */
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.06) 0%,
+    rgba(255, 255, 255, 0.36) 12%,
+    rgba(255, 255, 255, 0.7) 18%,
+    rgba(255, 255, 255, 0.18) 36%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  transform-origin: center center;
+  --flash-duration: 220ms;
+  animation: shootFlashSmall var(--flash-duration) ease-out forwards;
+}
+
+/* slightly smaller variant used for normal shots */
+@keyframes shootFlashSmall {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  10% {
+    opacity: 0.85;
+    transform: scale(1.06);
+  }
+  40% {
+    opacity: 0.45;
+    transform: scale(1.02);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+}
+
+/* bigger flash (for kills), still ring-style but wider */
+.shoot-flash.big {
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.03) 0%,
+    rgba(255, 255, 255, 0.48) 10%,
+    rgba(255, 255, 255, 0.9) 24%,
+    rgba(255, 255, 255, 0.28) 46%,
+    rgba(255, 255, 255, 0) 72%
+  );
+  --flash-duration: 520ms;
+}
+
+/* SCREEN SHAKE (unchanged but kept here if needed) */
+.screen-shake {
+  animation: screenShake 220ms linear;
+}
+@keyframes screenShake {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  15% {
+    transform: translate3d(-6px, 4px, 0) rotate(-0.5deg);
+  }
+  30% {
+    transform: translate3d(6px, -3px, 0) rotate(0.4deg);
+  }
+  45% {
+    transform: translate3d(-4px, 2px, 0) rotate(-0.3deg);
+  }
+  60% {
+    transform: translate3d(3px, -2px, 0) rotate(0.2deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Red shake visual for wrong-letter feedback - center-stable version */
+.word-wrong-shake {
+  display: inline-block;
+  position: relative; /* create containing box that doesn't reflow */
+  margin-left: auto;
+  margin-right: auto; /* keep container centered in its parent */
+  transform-origin: center center;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Animate the inner content so the container's layout position remains fixed.
+   This targets direct children (letters / spans). */
+.word-wrong-shake > * {
+  display: inline-block;
+  transform-origin: center center;
+  will-change: transform, filter;
+  /* ensure the inner element is the thing that moves, keeping outer center fixed */
+}
+
+/* color / glow applied only during shake */
+.word-wrong-shake .word-letter,
+.word-wrong-shake span {
+  color: #ff6b6b !important;
+  text-shadow: 0 0 8px rgba(255, 90, 90, 0.9);
+}
+
+/* brief horizontal shake with slight rotation around the center.
+   Uses translate3d for smoother GPU-accelerated motion and keeps the outer box in place. */
+@keyframes wordWrong {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+    filter: none;
+  }
+  12% {
+    transform: translate3d(-8px, 0, 0) rotate(-2deg);
+  }
+  28% {
+    transform: translate3d(10px, 0, 0) rotate(2.5deg);
+  }
+  44% {
+    transform: translate3d(-6px, 0, 0) rotate(-1.2deg);
+  }
+  60% {
+    transform: translate3d(4px, 0, 0) rotate(0.6deg);
+  }
+  76% {
+    transform: translate3d(-2px, 0, 0) rotate(-0.3deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+    filter: none;
+  }
+}
+
+/* Apply the animation to the inner element */
+.word-wrong-shake > * {
+  animation: wordWrong 380ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.score-bonus {
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  font-size: 1.2rem;
+  opacity: 0;
+  color: #4eff9f;
+  transition: all 0.3s ease;
+}
+
+.score-bonus.show {
+  opacity: 1;
+  transform: translateY(-10px);
+}
+
+.highscore-label {
+  font-size: 1rem;
+  color: #ffd700;
+  text-transform: uppercase;
+  opacity: 0.8;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#highscoreValue {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #ffd700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 0 10px rgba(255, 215, 0, 0.4);
+}
+
+/* Animation for new high score */
+@keyframes highscoreFlash {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+    color: #fff;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+#scoreContainer {
+  /* Positioning dan Animasi Slide-in */
+  position: fixed; /* Gunakan fixed agar tetap pada viewport */
+  left: 40px;
+  bottom: -100px; /* POSISI AWAL (Off-screen) */
+  opacity: 0; /* Mulai tersembunyi */
+
+  /* Transisi untuk Slide-in */
+  transition: bottom 1s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.8s ease;
+
+  /* Struktur Vertikal: Flexbox */
+  display: flex;
+  flex-direction: column; /* Regular Score di atas High Score */
+  align-items: flex-start;
+  gap: 5px; /* Jarak antara Regular Score dan High Score */
+
+  font-family: "Barlow Condensed", sans-serif;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+/* Class yang dipanggil dari JS untuk memicu slide-in */
+#scoreContainer.show {
+  bottom: 40px; /* POSISI AKHIR (40px dari bawah) */
+  opacity: 1;
+}
+
+/* --- Regular Score (Anak dari Container) --- */
+#scoreDisplay {
+  /* Hapus positioning lama */
+  position: static;
+  font-size: 3.5rem; /* Ukuran yang lebih besar */
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: auto;
+}
+
+/* --- High Score Display (Anak dari Container) --- */
+#highscoreDisplay {
+  /* Hapus positioning lama */
+  position: static;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #ffd700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  display: flex; /* Biarkan label dan nilai berdampingan di baris ini */
+  gap: 5px;
+  line-height: 1;
+  z-index: auto;
+}
+
+.highscore-label {
+  font-size: 1.2rem; /* Sesuaikan ukuran label agar serasi */
+  color: #ffd700;
+  text-transform: uppercase;
+  opacity: 0.8;
+  font-weight: 700;
+  text-shadow: none;
+}
+#highscoreValue {
+  font-size: 1.2rem; /* Sesuaikan ukuran nilai */
+  font-weight: 700;
+  color: #ffd700;
+  text-shadow: none;
+}
+
+/* score-bonus dan keyframes highscoreFlash tetap berlaku */
+
+.new-highscore {
+  animation: highscoreFlash 0.5s ease-in-out;
+}
+
+/* Ranged enemy */
+/* === RANGED ENEMY (PURPLE) === */
+.enemy.ranged {
+  background: radial-gradient(circle at center, #b14eff 0%, #4b007a 100%);
+  box-shadow: 0 0 25px rgba(177, 78, 255, 0.8), 0 0 10px rgba(255, 0, 128, 0.5);
+}
+
+/* === RANGE ENEMY LASER (PURPLE → RED GRADIENT) === */
+.ranged-laser {
+  position: absolute;
+  height: 4px;
+  background: linear-gradient(to right, #b14eff 0%, #ff004c 100%);
+  box-shadow: 0 0 12px rgba(255, 0, 128, 0.8), 0 0 25px rgba(177, 78, 255, 0.7);
+  transform-origin: left center;
+  pointer-events: none;
+  border-radius: 2px;
+  width: 0;
+  transition: width 100ms linear, opacity 300ms ease-out, height 300ms ease-out;
+}
+
+/* === RANGED ENEMY CHARGE INDICATOR === */
+.charge-indicator {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 3px solid rgba(177, 78, 255, 0.6);
+  box-shadow: 0 0 15px rgba(177, 78, 255, 0.8);
+  pointer-events: none;
+  z-index: 50;
+  animation: chargeShift 1.5s linear forwards;
+}
+
+@keyframes chargeShift {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.5;
+    border-color: rgba(177, 78, 255, 0.6);
+    box-shadow: 0 0 8px rgba(177, 78, 255, 0.5);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.3);
+    opacity: 1;
+    border-color: rgba(255, 100, 200, 0.9);
+    box-shadow: 0 0 16px rgba(255, 0, 128, 0.8);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.7;
+    border-color: rgba(255, 30, 30, 1);
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.9);
+  }
+}
+
+/* === HEALTH COLLECTIBLE === */
+.health-indicator {
+  position: absolute;
+  top: 50%;
+  left: -22px; /* move to the left of the word */
+  transform: translateY(-50%);
+  font-size: 22px;
+  font-weight: 800;
+  color: #00f6ff;
+  text-shadow: 0 0 6px #00f6ff, 0 0 12px #00ffaa,
+    0 0 20px rgba(0, 255, 255, 0.8);
+  animation: floatPulse 1.3s infinite ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes floatPulse {
+  0%,
+  100% {
+    transform: translateY(-50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-55%) scale(1.05);
+    opacity: 0.7;
+  }
+}
+
+/* === HEAL POPUP === */
+.heal-popup {
+  position: fixed;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  background: linear-gradient(to bottom right, #00f6ff, #00ffaa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
+  pointer-events: none;
+  animation: healFloat 1s ease-out forwards;
+  z-index: 2000;
+}
+
+@keyframes healFloat {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-25px);
+    opacity: 0;
+  }
+}
+
+/* === BOMB INDICATOR (inline beside word) === */
+.bomb-indicator {
+  position: absolute;
+  top: 50%;
+  right: -22px; /* mirror of health indicator */
+  transform: translateY(-50%);
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 1;
+  pointer-events: none;
+
+  color: #ff5145;
+  text-shadow: 0 0 6px #ff5145, 0 0 12px #ff8a20, 0 0 20px rgba(255, 60, 0, 0.9);
+  animation: bombPulse 1.1s infinite ease-in-out;
+  border-radius: 3px;
+  transform-origin: center;
+}
+
+/* subtle pulse so bomb is visible but not twitching */
+@keyframes bombPulse {
+  0%,
+  100% {
+    transform: translateY(-50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-52%) scale(1.08);
+    opacity: 0.8;
+  }
+}
+
+/* === EXPLOSION CORE (red-yellow-orange) === */
+.explosion-core {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 500;
+  transform: scale(0.2);
+  opacity: 0.95;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255, 240, 120, 0.95) 0%,
+    rgba(255, 160, 40, 0.95) 30%,
+    rgba(255, 40, 10, 0.95) 60%,
+    rgba(160, 16, 8, 0.9) 100%
+  );
+  box-shadow: 0 0 12px rgba(255, 120, 30, 0.9), 0 0 30px rgba(255, 40, 10, 0.85),
+    0 0 60px rgba(255, 20, 10, 0.6);
+  animation: explosionPop 420ms ease-out forwards;
+}
+
+@keyframes explosionPop {
+  0% {
+    transform: scale(0.2);
+    opacity: 0.9;
+    filter: blur(6px);
+  }
+  60% {
+    transform: scale(1.05);
+    opacity: 1;
+    filter: blur(0px);
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0;
+    filter: blur(4px);
+  }
+}
+
+/* === SHOCKWAVE (visual only) === */
+.explosion-shockwave {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 490;
+  border: 2px solid rgba(255, 180, 40, 0.25);
+  box-shadow: 0 0 30px rgba(255, 120, 30, 0.22),
+    inset 0 0 12px rgba(255, 200, 80, 0.06);
+  transform: scale(0.3);
+  opacity: 0.9;
+  animation: shockWave 700ms ease-out forwards;
+}
+
+@keyframes shockWave {
+  0% {
+    transform: scale(0.2);
+    opacity: 0.9;
+  }
+  40% {
+    transform: scale(1.3);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* small center flash */
+.explosion-flash {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1),
+    rgba(255, 220, 120, 0.9)
+  );
+  z-index: 520;
+  pointer-events: none;
+  animation: flashPop 220ms ease-out forwards;
+}
+@keyframes flashPop {
+  0% {
+    transform: scale(0.2);
+    opacity: 1;
+    filter: blur(6px);
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+    filter: blur(0px);
+  }
+}
+/* Leaderboard Panel */
+.leaderboard {
+  background-color: rgba(16, 24, 43, 0.7);
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  width: 700px;
+  min-height: 420px;
+  color: #cfd3da;
+}
+
+.leaderboard h2 {
+  color: #f1d65b;
+  font-size: 32px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#leaderboardContent {
+  width: 100%;
+}
+
+#leaderboardTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+#leaderboardTable th,
+#leaderboardTable td {
+  padding: 10px 8px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#leaderboardTable th {
+  color: #f1d65b;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+#leaderboardTable td {
+  color: #aeb6c5;
+  font-size: 16px;
+}
+
+#leaderboardTable tbody tr:hover {
+  background-color: rgba(241, 214, 91, 0.05);
+}
+
+#leaderboardTable .leaderboard-player {
+  background-color: rgba(24, 160, 255, 0.2);
+  border-radius: 4px;
+}
+
+/* Credits Panel - styled like new game section panels */
+.credits {
+  background-color: rgba(16, 24, 43, 0.7);
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  width: 320px;
+  min-height: 420px;
+  color: #cfd3da;
+}
+
+.credits h2 {
+  color: #f1d65b;
+  font-size: 32px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+#creditsContent p {
+  color: #aeb6c5;
+  line-height: 1.5;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#creditsContent a {
+  color: #f1d65b;
+  text-decoration: none;
+}
+
+#creditsContent a:hover {
+  text-decoration: underline;
+}
+
+/* === QUIT OVERLAY === */
+.quit-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(1px);
+  z-index: 9999;
+}
+.quit-card {
+  width: 420px;
+  max-width: calc(100% - 40px);
+  background: #0d121c;
+  color: #e6f7ff;
+  padding: 25px 35px;
+  border-radius: 4px;
+  border: 1px solid #00ff8033;
+  box-shadow: 0 0 15px rgba(0, 255, 128, 0.15), 0 0 5px rgba(0, 255, 128, 0.05);
+  font-family: "Consolas", monospace;
+  animation: fadeIn 0.5s ease-out;
+}
+.quit-card h2 {
+  margin: 0 0 15px;
+  text-align: center;
+  font-size: 28px;
+  letter-spacing: 2px;
+  color: #00ff80;
+  text-shadow: 0 0 8px rgba(0, 255, 128, 0.6);
+}
+.quit-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 25px;
+}
+.quit-buttons button {
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: 1px solid #00ff80;
+  cursor: pointer;
+  background: #00ff8011;
+  color: #00ff80;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.quit-buttons button:hover {
+  background: #00ff8022;
+  box-shadow: 0 0 10px rgba(0, 255, 128, 0.5);
+}
+
+/* === CARDS === */
+.card-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  z-index: 9999;
+}
+
+.upgrade-card {
+  width: 200px;
+  background: rgba(16, 24, 43, 0.9);
+  border: 2px solid #f1d65b;
+  border-radius: 12px;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.upgrade-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #f1d65b;
+}
+
+.upgrade-card h3 {
+  color: #f1d65b;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+/* Options UI styled like the new game section */
+.options .options-shell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 18px 0;
+}
+.options .opt-arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: rgba(31, 41, 64, 0.6);
+  color: #cfd3da;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+.options .opt-arrow:hover {
+  border-color: #f1d65b;
+  color: #f1d65b;
+}
+.options .opt-panel {
+  width: 720px;
+  max-width: calc(100% - 120px);
+  background: rgba(16, 24, 43, 0.7);
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  color: #cfd3da;
+}
+.options .opt-header {
+  text-align: center;
+  font-size: 28px;
+  color: #f1d65b;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+.options .opt-dots {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.options .opt-dots .dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: 0 4px;
+  border-radius: 50%;
+  background: rgba(31, 41, 64, 0.6);
+  opacity: 0.9;
+}
+.options .opt-dots .dot.active {
+  background: #f1d65b;
+}
+
+.options .opt-page {
+  padding: 0;
+}
+.options .opt-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.options .opt-row label {
+  flex: 0 0 220px;
+  font-size: 20px;
+  color: #cfd3da;
+  padding-left: 0;
+}
+.options .opt-row input[type="range"] {
+  flex: 1;
+  min-width: 160px;
+  background: rgba(31, 41, 64, 0.6);
+  border: 2px solid transparent;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+}
+.options .opt-row input[type="range"]:hover {
+  border-color: #f1d65b;
+}
+.options .opt-row select {
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  background: rgba(31, 41, 64, 0.6);
+  color: #cfd3da;
+  font-size: 16px;
+  transition: all 0.25s ease;
+}
+.options .opt-row select:hover {
+  border-color: #f1d65b;
+  color: #f1d65b;
+}
+
+.options .opt-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 25px;
+}
+.options .opt-actions button {
+  padding: 12px 30px;
+  border-radius: 6px;
+  border: 2px solid #1f2940;
+  background: #1f2940;
+  color: #cfd3da;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.options .opt-actions button:hover {
+  border-color: #f1d65b;
+  color: #f1d65b;
+  background: rgba(241, 214, 91, 0.1);
+  box-shadow: 0 0 15px rgba(241, 214, 91, 0.6);
+}
+
+/* responsive tweaks */
+@media (max-width: 900px) {
+  .options .opt-panel {
+    width: 92%;
+    padding: 18px;
+  }
+  .options .opt-arrow {
+    display: none;
+  }
+  .options .opt-dots {
+    display: block;
+  }
+}
